@@ -50,8 +50,8 @@ resource "aws_s3_object" "todo-webapp-assets" {
   bucket = aws_s3_bucket.frontend-app-bucket.id
   key    = each.value
 
-  source = "../dist/todo-webapp/${each.value}"
-  etag   = filemd5("../dist/todo-webapp/${each.value}")
+  source = "../${var.frontendAppDistPath}/${each.value}"
+  etag   = filemd5("../${var.frontendAppDistPath}/${each.value}")
   // simplification of the content type serving
   content_type = lookup(
     local.content_type_map,
