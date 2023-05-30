@@ -5,7 +5,7 @@ terraform {
     region         = "ap-southeast-1"
     dynamodb_table = "todo-webapp-state-locking"
     encrypt        = true
-    profile        = "terraform-labs-user"
+    # profile        = "terraform-labs-user"
   }
 
   required_providers {
