@@ -36,9 +36,7 @@ jobs:
 
       - name: Initialize Terraform
         run: |
-          ls
           cd terraform
-          ls
           terraform init
 
       - name: Apply Terraform changes
